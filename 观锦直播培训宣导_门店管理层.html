@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>观锦餐厅&锦燚火锅 · 门店管理层培训宣导</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Source Han Serif CN", serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            color: #fff;
+            line-height: 1.8;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+
+        
+        /* 水墨纹理背景 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(180, 180, 180, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(180, 180, 180, 0.03) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.015' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, rgba(180, 30, 40, 0.08) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(180, 30, 40, 0.3);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        /* 品牌书法字装饰 */
+        .header::before {
+            content: '观锦';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10em;
+            font-family: "Source Han Serif CN", "Noto Serif SC", serif;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.025);
+            letter-spacing: 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .header h1 {
+            font-size: 3.2em;
+            font-weight: 700;
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #c41e3a, #e8d5d5, #c41e3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+            font-family: "Source Han Serif CN", "Noto Serif SC", serif;
+        }
+        
+        .header .subtitle {
+            font-size: 1.5em;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 1;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .header .meta {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-item .label {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .meta-item .value {
+            font-size: 1.4em;
+            color: #c41e3a;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        /* 三平台标识 */
+        .triple-platform-badge {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .triple-platform-badge > span:first-child {
+            color: rgba(255,255,255,0.6);
+            font-size: 1em;
+            letter-spacing: 3px;
+        }
+        
+        .platform-tag {
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1em;
+            letter-spacing: 2px;
+        }
+        
+        .platform-tag.meituan {
+            background: linear-gradient(135deg, #FFD100, #FFA500);
+            color: #333;
+        }
+        
+        .platform-tag.dianping {
+            background: linear-gradient(135deg, #FF6633, #FF4422);
+            color: #fff;
+        }
+        
+        .platform-tag.douyin {
+            background: linear-gradient(135deg, #FE2C55, #25F4EE);
+            color: #fff;
+        }
+        
+        /* Section Styles */
+        .section {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(180, 30, 40, 0.15);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(180, 30, 40, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #c41e3a;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(180, 30, 40, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: "Source Han Serif CN", "Noto Serif SC", serif;
+        }
+        
+        .section-title .num {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1em;
+            box-shadow: 0 0 20px rgba(196, 30, 58, 0.3);
+        }
+        
+        /* Target Cards - 横向紧凑布局 */
+        .target-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .target-card {
+            flex: 1;
+            min-width: 180px;
+            background: linear-gradient(135deg, rgba(180, 30, 40, 0.08), rgba(180, 30, 40, 0.03));
+            border: 1px solid rgba(180, 30, 40, 0.2);
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .target-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c41e3a, transparent);
+        }
+        
+        .target-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(180, 30, 40, 0.15);
+        }
+        
+        .target-card .store-name {
+            font-size: 1em;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .target-card .amount {
+            font-size: 2em;
+            font-weight: 700;
+            color: #c41e3a;
+            text-shadow: 0 0 20px rgba(196, 30, 58, 0.3);
+        }
+        
+        .target-card .unit {
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .total-target-inline {
+            background: linear-gradient(135deg, rgba(180, 30, 40, 0.15), rgba(180, 30, 40, 0.05));
+            border: 2px solid #c41e3a;
+            text-align: center;
+            padding: 20px 30px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .total-target-inline .label {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 3px;
+        }
+        
+        .total-target-inline .amount {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #c41e3a;
+            text-shadow: 0 0 30px rgba(196, 30, 58, 0.4);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #c41e3a, rgba(196, 30, 58, 0.2));
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px 0 30px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background: #c41e3a;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(196, 30, 58, 0.5);
+        }
+        
+        .timeline-item .date {
+            font-size: 0.9em;
+            color: #c41e3a;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .timeline-item .title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-item .tasks {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95em;
+        }
+        
+        .timeline-item .tasks li {
+            margin: 5px 0;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .timeline-item .tasks li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+        }
+        
+        /* Value Cards */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .value-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 25px;
+        }
+        
+        .value-card .price {
+            font-size: 2em;
+            font-weight: 700;
+            color: #c41e3a;
+            margin-bottom: 5px;
+        }
+        
+        .value-card .name {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .value-card .desc {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+        
+        .value-card .original {
+            text-decoration: line-through;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9em;
+        }
+        
+        /* Product Table */
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .product-table th {
+            background: rgba(180, 30, 40, 0.15);
+            color: #c41e3a;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(180, 30, 40, 0.3);
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .product-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.85);
+        }
+        
+        .product-table tr:hover td {
+            background: rgba(180, 30, 40, 0.05);
+        }
+        
+        .product-table .price-highlight {
+            color: #c41e3a;
+            font-weight: 700;
+        }
+        
+        .product-table .rule-note {
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.5);
+            font-style: italic;
+        }
+        
+        /* Checklist */
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .checklist-group {
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            padding: 25px;
+        }
+        
+        .checklist-group h4 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(180, 30, 40, 0.2);
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .checklist-group ul {
+            list-style: none;
+        }
+        
+        .checklist-group li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        
+        .checklist-group li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-size: 1.2em;
+        }
+        
+        /* Channels */
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .channel-card {
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            padding: 30px;
+            border-left: 4px solid #c41e3a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .channel-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(196, 30, 58, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .channel-card h4 {
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .channel-card ul {
+            list-style: none;
+        }
+        
+        .channel-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .channel-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+        }
+        
+        /* Templates */
+        .template-box {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(180, 30, 40, 0.15);
+            position: relative;
+        }
+        
+        .template-box h5 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-size: 1em;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .template-content {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            white-space: pre-line;
+            border-left: 3px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .template-note {
+            margin-top: 15px;
+            padding: 12px 15px;
+            background: rgba(180, 30, 40, 0.1);
+            border-radius: 8px;
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.7);
+            border-left: 3px solid #c41e3a;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(180, 30, 40, 0.12), rgba(180, 30, 40, 0.04));
+            border: 1px solid rgba(180, 30, 40, 0.25);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #c41e3a, transparent);
+        }
+        
+        .highlight-box p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        /* Platform Entry */
+        .platform-entry {
+            background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .platform-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .platform-card.meituan {
+            border: 2px solid #FFD100;
+            background: linear-gradient(180deg, rgba(255,209,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .platform-card.douyin {
+            border: 2px solid #FE2C55;
+            background: linear-gradient(180deg, rgba(254,44,85,0.1) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+        
+        .platform-card.meituan::before {
+            background: linear-gradient(90deg, #FFD100, #FF6B00);
+        }
+        
+        .platform-card.douyin::before {
+            background: linear-gradient(90deg, #FE2C55, #25F4EE);
+        }
+        
+        .platform-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .platform-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .platform-card.meituan .platform-name {
+            color: #FFD100;
+        }
+        
+        .platform-card.douyin .platform-name {
+            background: linear-gradient(90deg, #FE2C55, #25F4EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .platform-action {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .platform-code {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 10px 0;
+            letter-spacing: 4px;
+        }
+        
+        .platform-card.meituan .platform-code {
+            color: #FFD100;
+            text-shadow: 0 0 20px rgba(255,209,0,0.3);
+        }
+        
+        .platform-card.douyin .platform-code {
+            background: linear-gradient(90deg, #FE2C55, #25F4EE);
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .platform-desc {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.6);
+            margin-top: 15px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 80px 20px 60px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(180, 30, 40, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, transparent 0%, rgba(180, 30, 40, 0.05) 100%);
+        }
+        
+        .footer::before {
+            content: '锦燚';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12em;
+            font-family: "Source Han Serif CN", serif;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.015);
+            letter-spacing: 30px;
+            pointer-events: none;
+        }
+        
+        .footer h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #c41e3a;
+            margin-bottom: 25px;
+            letter-spacing: 8px;
+            font-family: "Source Han Serif CN", serif;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer .slogan {
+            font-size: 1.8em;
+            color: rgba(255,255,255,0.9);
+            margin: 20px 0;
+            letter-spacing: 4px;
+            font-family: "Source Han Serif CN", serif;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer .slogan-sub {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.6);
+            margin: 15px 0;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer p {
+            color: rgba(255,255,255,0.6);
+            margin: 10px 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .action-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .action-item {
+            background: rgba(180, 30, 40, 0.1);
+            border: 1px solid rgba(180, 30, 40, 0.3);
+            padding: 15px 30px;
+            border-radius: 30px;
+            color: #c41e3a;
+            font-family: "Source Han Serif CN", serif;
+            letter-spacing: 1px;
+        }
+        
+        /* Company Branding */
+        .company-branding {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(180, 30, 40, 0.15);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .company-name {
+            font-size: 1.3em;
+            color: #c41e3a;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-family: "Source Han Serif CN", serif;
+        }
+        
+        .company-tagline {
+            font-size: 0.95em;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 2px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+                letter-spacing: 6px;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .target-row {
+                flex-direction: column;
+            }
+            
+            .target-card {
+                min-width: 100%;
+            }
+            
+            .channels-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer h2 {
+                font-size: 1.8em;
+            }
+            
+            .footer .slogan {
+                font-size: 1.3em;
+            }
+        }
+        
+        /* Warning Badge */
+        .warning-badge {
+            display: inline-block;
+            background: rgba(180, 30, 40, 0.15);
+            color: #c41e3a;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 30px;
+            border: 1px solid rgba(180, 30, 40, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 品牌印章装饰 */
+        .brand-seal {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: rgba(196, 30, 58, 0.1);
+            border: 2px solid rgba(196, 30, 58, 0.4);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Source Han Serif CN", serif;
+            font-size: 1.2em;
+            color: #c41e3a;
+            writing-mode: vertical-rl;
+            letter-spacing: 4px;
+            margin: 20px auto;
+        }
+        
+        /* Triple Platform Badge */
+        .triple-platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .triple-platform-badge span:first-child {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95em;
+        }
+        
+        .platform-tag {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .platform-tag.meituan {
+            background: #FFD100;
+            color: #000;
+        }
+        
+        .platform-tag.dianping {
+            background: #FF6633;
+            color: #fff;
+        }
+        
+        .platform-tag.douyin {
+            background: linear-gradient(90deg, #FE2C55, #25F4EE);
+            color: #fff;
+        }
+        
+        /* 储值卡规则提示 */
+        .storage-rules {
+            background: rgba(255, 209, 0, 0.05);
+            border: 1px solid rgba(255, 209, 0, 0.2);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 20px;
+        }
+        
+        .storage-rules h5 {
+            color: #FFD100;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        
+        .storage-rules ul {
+            list-style: none;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .storage-rules li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .storage-rules li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #FFD100;
+        }
+        
+        .storage-rules .warning {
+            color: #c41e3a;
+            font-weight: 600;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 209, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>观锦餐厅&锦燚火锅</h1>
+            <p class="subtitle">门店管理层培训宣导</p>
+            <div class="meta">
+                <div class="meta-item">
+                    <div class="label">直播日期</div>
+                    <div class="value">2026年4月17日</div>
+                </div>
+                <div class="meta-item">
+                    <div class="label">培训对象</div>
+                    <div class="value">4家门店管理层</div>
+                </div>
+                <div class="meta-item">
+                    <div class="label">参与门店</div>
+                    <div class="value">全线联动</div>
+                </div>
+            </div>
+            <div class="triple-platform-badge">
+                <span>三平台同步直播</span>
+                <span class="platform-tag meituan">美团</span>
+                <span class="platform-tag dianping">大众点评</span>
+                <span class="platform-tag douyin">抖音</span>
+            </div>
+        </div>
+
+        <!-- Section 1: 门店目标分解 - 横向紧凑布局 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">01</span>
+                门店直播目标分解
+            </div>
+            
+            <div class="target-row">
+                <div class="target-card">
+                    <div class="store-name">天府新谷店</div>
+                    <div class="amount">35<span class="unit">万</span></div>
+                </div>
+                <div class="target-card">
+                    <div class="store-name">天廊店</div>
+                    <div class="amount">30<span class="unit">万</span></div>
+                </div>
+                <div class="target-card">
+                    <div class="store-name">德商国际店</div>
+                    <div class="amount">25<span class="unit">万</span></div>
+                </div>
+                <div class="target-card">
+                    <div class="store-name">锦燚火锅</div>
+                    <div class="amount">10<span class="unit">万</span></div>
+                </div>
+                <div class="total-target-inline">
+                    <div class="label">品牌直播总目标</div>
+                    <div class="amount">100万</div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Section 2: 直播项目全貌 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">02</span>
+                直播项目全貌
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">4月10日 · 货盘确认</div>
+                    <div class="title">确认直播套餐终版</div>
+                    <ul class="tasks">
+                        <li>双人餐/四人餐排品确认</li>
+                        <li>代金券系列最终核定</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">4月12日 · 资源确认</div>
+                    <div class="title">确认服务商资源</div>
+                    <ul class="tasks">
+                        <li>平台流量/货补预算确认</li>
+                        <li>直播场景确定为绿幕</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">4月14日 · 预热启动</div>
+                    <div class="title">物料定稿上线</div>
+                    <ul class="tasks">
+                        <li>员工朋友圈宣发启动</li>
+                        <li>套餐前置设置完成</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">4月16日 · 冲刺准备</div>
+                    <div class="title">全渠道全力冲刺</div>
+                    <ul class="tasks">
+                        <li>分销渠道就位</li>
+                        <li>门店物料进场（水牌/传单）</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">4月17日 · 直播日</div>
+                    <div class="title">直播执行</div>
+                    <ul class="tasks">
+                        <li>实时互动 & 数据监控</li>
+                        <li>门店接待准备就绪</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>直播形式：</strong>品牌官方账号直播 | <strong>直播场景：</strong>现场直播+分镜切换（中餐到火锅） | <strong>参与门店：</strong>4家门店全线联动 | <strong>货补率：</strong>6%-8%</p>
+            </div>
+        </div>
+
+        <!-- Section 3: 直播价值与利益点 - 突出历史破价 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">03</span>
+                直播价值与利益点
+            </div>
+            
+            <div class="highlight-box" style="text-align: center; margin-bottom: 30px;">
+                <p style="font-size: 1.4em; margin-bottom: 15px; font-family: 'Source Han Serif CN', serif;">
+                    <span style="color: #c41e3a; font-size: 1.6em; font-weight: 700;">历史破价 · 品牌首惠</span>
+                </p>
+                <p style="font-size: 1.1em; color: rgba(255,255,255,0.8);">
+                    观锦品牌从未做过折扣，本次直播为首次破价让利，庆祝十周年预热
+                </p>
+                <p style="font-size: 0.95em; color: rgba(255,255,255,0.6); margin-top: 10px;">
+                    表现优异者，夏季末将参与盛大的十周年庆直播
+                </p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="price">6.5折起</div>
+                    <div class="name">观锦中餐代金券</div>
+                    <div class="desc">历史最低价，品牌首次折扣</div>
+                </div>
+                <div class="value-card">
+                    <div class="price">6折起</div>
+                    <div class="name">锦燚火锅代金券</div>
+                    <div class="desc">火锅品类破价，超值体验</div>
+                </div>
+                <div class="value-card">
+                    <div class="price">6-8%</div>
+                    <div class="name">平台货补</div>
+                    <div class="desc">品牌直播专属补贴，降低门店核销成本</div>
+                </div>
+                <div class="value-card">
+                    <div class="price">全国曝光</div>
+                    <div class="name">品牌流量</div>
+                    <div class="desc">APP首页/品牌频道，多渠道流量加持</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 30px;">
+                <p><strong>核心逻辑：</strong>历史破价引流 → 低成本到店 → 复购转化 → 长期锁客</p>
+                <p style="margin-top: 15px; font-style: italic;">每张团购券就是一次与顾客的连接机会，门店服务的品质决定复购率，让直播流量变「留量」</p>
+                <p style="margin-top: 10px; color: #FFD100; font-size: 0.95em;">表现优异者，夏季末将参与盛大的十周年庆直播</p>
+            </div>
+        </div>
+
+        <!-- Section 4: 直播货盘详情 - 含使用规则 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">04</span>
+                直播货盘详情
+            </div>
+            
+            <div class="highlight-box" style="text-align: center; margin-bottom: 30px;">
+                <p style="font-size: 1.2em; margin-bottom: 15px;">
+                    <span style="color: #c41e3a; font-size: 1.5em; font-weight: 700;">中餐代金券 6.5折起</span>
+                    <span style="margin: 0 20px; color: rgba(255,255,255,0.4);">|</span>
+                    <span style="color: #c41e3a; font-size: 1.5em; font-weight: 700;">火锅代金券 6折起</span>
+                </p>
+                <p style="color: rgba(255,255,255,0.7);">美团/大众点评 输入口令 <span style="color: #FFD100; font-weight: 700; font-size: 1.2em;">3333</span> | 抖音搜索 <span style="background: linear-gradient(90deg, #FE2C55, #25F4EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">观锦</span></p>
+            </div>
+            
+            <h4 style="color: #c41e3a; margin: 20px 0 15px; font-family: 'Source Han Serif CN', serif;">观锦 · 代金券系列</h4>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>产品名称</th>
+                        <th>原价</th>
+                        <th>直播售价</th>
+                        <th>折扣</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100元代金券</td>
+                        <td>100元</td>
+                        <td class="price-highlight">75元</td>
+                        <td>7.5折</td>
+                    </tr>
+                    <tr>
+                        <td>300元代金券</td>
+                        <td>300元</td>
+                        <td class="price-highlight">210元</td>
+                        <td>7折</td>
+                    </tr>
+                    <tr>
+                        <td>500元代金券</td>
+                        <td>500元</td>
+                        <td class="price-highlight">380元</td>
+                        <td>7.6折</td>
+                    </tr>
+                    <tr>
+                        <td>100元午市代金券</td>
+                        <td>300元</td>
+                        <td class="price-highlight">195元</td>
+                        <td>6.5折 <span style="color: #c41e3a;">【待林总审核】</span></td>
+                    </tr>
+                    <tr>
+                        <td>300元午市代金券</td>
+                        <td>500元</td>
+                        <td class="price-highlight">325元</td>
+                        <td>6.5折 <span style="color: #c41e3a;">【待林总审核】</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="storage-rules">
+                <h5>📋 观锦代金券使用规则</h5>
+                <ul>
+                    <li>可与【直播专享】单品券同享，不与套餐同享</li>
+                    <li>除酒水饮料海鲜外全场可用，每桌每单限用2张</li>
+                    <li>不同面额代金券不能混用；代金券不拆单，不拆桌</li>
+                    <li>仅堂食可用；不与门店其他优惠同享</li>
+                </ul>
+            </div>
+            
+            <h4 style="color: #c41e3a; margin: 30px 0 15px; font-family: 'Source Han Serif CN', serif;">观锦 · 储值卡</h4>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>产品名称</th>
+                        <th>原价</th>
+                        <th>直播售价</th>
+                        <th>折扣</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1000元储值卡</td>
+                        <td>1000元</td>
+                        <td class="price-highlight">850元</td>
+                        <td>8.5折</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="storage-rules">
+                <h5>📋 储值卡使用规则</h5>
+                <ul>
+                    <li>专属卡名：观锦417直播储值卡</li>
+                    <li>除酒水饮料外全场通用（锦燚火锅店除锅底外全场通用）</li>
+                    <li>核销期：购买后30天内到店核销完成储值到账</li>
+                    <li>不与门店其他团购优惠同享；不可退卡、不找零、不兑现、不转赠</li>
+                    <li>首次使用抵扣金额不超过储值金额的80%</li>
+                    <li>可购买多张储值卡，并合并储值至同一会员账户使用</li>
+                </ul>
+            </div>
+            
+            <div class="storage-rules" style="border-color: #c41e3a; background: rgba(196, 30, 58, 0.05);">
+                <h5 style="color: #c41e3a;">⚠️ 储值卡防刷单规则（重要）</h5>
+                <ul>
+                    <li>单次储值购买不得超过10张</li>
+                    <li>必须保留储值小票作为凭证</li>
+                    <li>记录每笔核销时间与操作人员</li>
+                    <li>建立监控台账，便于平台申诉</li>
+                </ul>
+                <p class="warning">预防平台判定刷单，所有储值操作必须留痕可追溯</p>
+            </div>
+            
+            <h4 style="color: #c41e3a; margin: 30px 0 15px; font-family: 'Source Han Serif CN', serif;">锦燚火锅 · 代金券系列</h4>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>产品名称</th>
+                        <th>原价</th>
+                        <th>直播售价</th>
+                        <th>折扣</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100元代金券</td>
+                        <td>100元</td>
+                        <td class="price-highlight">70元</td>
+                        <td>7折</td>
+                    </tr>
+                    <tr>
+                        <td>300元代金券</td>
+                        <td>300元</td>
+                        <td class="price-highlight">210元</td>
+                        <td>7折</td>
+                    </tr>
+                    <tr>
+                        <td>500元代金券</td>
+                        <td>500元</td>
+                        <td class="price-highlight">380元</td>
+                        <td>7.6折</td>
+                    </tr>
+                    <tr>
+                        <td>100元午市代金券</td>
+                        <td>300元</td>
+                        <td class="price-highlight">177元</td>
+                        <td>5.9折 <span style="color: #c41e3a;">【待林总审核】</span></td>
+                    </tr>
+                    <tr>
+                        <td>300元午市代金券</td>
+                        <td>500元</td>
+                        <td class="price-highlight">295元</td>
+                        <td>5.9折 <span style="color: #c41e3a;">【待林总审核】</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="storage-rules">
+                <h5>📋 锦燚火锅代金券使用规则</h5>
+                <ul>
+                    <li>可与【直播专享】单品券同享，不与套餐同享</li>
+                    <li>除酒水饮料外可用，每桌每单限用2张</li>
+                    <li>不同面额代金券不能混用；代金券不拆单，不拆桌</li>
+                    <li>仅堂食可用；不与门店其他优惠同享</li>
+                </ul>
+            </div>
+            
+            <h4 style="color: #c41e3a; margin: 30px 0 15px; font-family: 'Source Han Serif CN', serif;">观锦 · 单品特惠</h4>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>产品名称</th>
+                        <th>原价</th>
+                        <th>直播售价</th>
+                        <th>折扣</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>藤椒盐水乳鸽/位</td>
+                        <td>38元</td>
+                        <td class="price-highlight">28.8元</td>
+                        <td>7.6折</td>
+                    </tr>
+                    <tr>
+                        <td>招牌大师豆瓣鱼</td>
+                        <td>158元</td>
+                        <td class="price-highlight">118元</td>
+                        <td>7.5折</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="storage-rules">
+                <h5>📋 观锦单品使用规则</h5>
+                <ul>
+                    <li>可与【直播专享】代金券或套餐同享</li>
+                    <li>单品可混合使用；本单品每桌每单限用1张</li>
+                    <li>仅堂食可用</li>
+                </ul>
+            </div>
+            
+            <h4 style="color: #c41e3a; margin: 30px 0 15px; font-family: 'Source Han Serif CN', serif;">锦燚火锅 · 单品特惠</h4>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>产品名称</th>
+                        <th>原价</th>
+                        <th>直播售价</th>
+                        <th>折扣</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>雪花和牛</td>
+                        <td>128元</td>
+                        <td class="price-highlight">88元</td>
+                        <td>6.9折</td>
+                    </tr>
+                    <tr>
+                        <td>特供血毛肚</td>
+                        <td>158元</td>
+                        <td class="price-highlight">66元</td>
+                        <td>4.2折</td>
+                    </tr>
+                    <tr>
+                        <td>特选鲜鸭肠</td>
+                        <td>49元</td>
+                        <td class="price-highlight">19.9元</td>
+                        <td>4.1折</td>
+                    </tr>
+                    <tr>
+                        <td>手工鲜肉抄手</td>
+                        <td>32元</td>
+                        <td class="price-highlight">3.9元</td>
+                        <td>1.2折</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="storage-rules">
+                <h5>📋 锦燚火锅单品使用规则</h5>
+                <ul>
+                    <li>可与【直播专享】代金券或套餐同享</li>
+                    <li>单品可混合使用；本单品每桌每单限用1张</li>
+                    <li>仅堂食可用</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 5: 预热期执行清单 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">05</span>
+                预热期执行清单
+            </div>
+            <p style="color: rgba(255,255,255,0.6); margin-bottom: 25px;">以4月17日直播日为基准，倒排预热节奏</p>
+            
+            <div class="checklist">
+                <div class="checklist-group">
+                    <h4>D-7 ~ D-5 (4月10-12日)</h4>
+                    <ul>
+                        <li>确认直播货架与套餐终版</li>
+                        <li>直播宣传物料定稿</li>
+                        <li>美团全体员工朋友圈宣发</li>
+                        <li>直播套餐前置设置完成</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>D-4 ~ D-3 (4月13-14日)</h4>
+                    <ul>
+                        <li>确认服务商资源</li>
+                        <li>商户通头图/入口图更换</li>
+                        <li>社群官发/达人宣发排期</li>
+                        <li>货架排序/分区/秒杀设计</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>D-2 (4月15日)</h4>
+                    <ul>
+                        <li>申请平台流量扶持</li>
+                        <li>全体员工朋友圈第一轮宣发</li>
+                        <li>门店物料进场（水牌/传单）</li>
+                        <li>员工私信集中发送</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>D-1 (4月16日)</h4>
+                    <ul>
+                        <li>确认货补预算（6%-8%）</li>
+                        <li>4.9元双人餐每日1库存上线</li>
+                        <li>公众号预热推文发布</li>
+                        <li>分销渠道最终确认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: 直播宣传渠道矩阵 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">06</span>
+                直播宣传渠道矩阵
+            </div>
+            
+            <div class="channels-grid">
+                <div class="channel-card">
+                    <h4>商家自有渠道（直播前5天启动）</h4>
+                    <ul>
+                        <li>商户通头图/入口图和商家新鲜事更换</li>
+                        <li>公众号预热推文发布</li>
+                        <li>全体办公室和门店员工朋友圈宣发</li>
+                        <li>门店物料进场（水牌/传单）</li>
+                        <li>4.9元双人餐每日库存1份，预热引流</li>
+                    </ul>
+                </div>
+                <div class="channel-card">
+                    <h4>美团渠道（直播前3天启动）</h4>
+                    <ul>
+                        <li>美团全体员工朋友圈宣发</li>
+                        <li>社群官发</li>
+                        <li>达人宣发</li>
+                        <li>物料展示（五图/入口图/品推图/品牌秀）</li>
+                        <li>新鲜事/朋友圈投放</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>关键提醒：</strong>商家宣发侧重口碑传播和私域流量，美团宣发侧重公域流量引入，两者配合实现全渠道覆盖</p>
+            </div>
+        </div>
+
+        <!-- Section 7: 员工宣发模板 - 优化直播倒计时文案 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">07</span>
+                员工宣发模板
+            </div>
+            
+            <div class="platform-entry" style="margin-bottom: 30px;">
+                <h4 style="color: #c41e3a; margin-bottom: 20px; text-align: center; font-family: 'Source Han Serif CN', serif;">三平台直播入口</h4>
+                <div class="platform-grid">
+                    <div class="platform-card meituan">
+                        <div class="platform-icon">🟡</div>
+                        <div class="platform-name">美团 / 大众点评</div>
+                        <div class="platform-action">搜索口令</div>
+                        <div class="platform-code">3333</div>
+                        <div class="platform-desc">输入口令直接进入直播间</div>
+                    </div>
+                    <div class="platform-card douyin">
+                        <div class="platform-icon">⚫</div>
+                        <div class="platform-name">抖音</div>
+                        <div class="platform-action">搜索</div>
+                        <div class="platform-code">观锦</div>
+                        <div class="platform-desc">或扫码直接进入直播间</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-bottom: 30px; text-align: center;">
+                <p style="font-size: 1.2em; margin-bottom: 10px; font-family: 'Source Han Serif CN', serif; letter-spacing: 2px;">
+                    <strong>四店同庆417宠粉 · 锦城烟火直播拾味</strong>
+                </p>
+                <p style="font-size: 1em; color: rgba(255,255,255,0.7);">
+                    十年锦城味 · 五年米其林 · 喝茶吃饭涮火锅
+                </p>
+            </div>
+            
+            <div class="template-box">
+                <h5>模板一：预热期朋友圈（4月13-15日发布）</h5>
+                <div class="template-content">🔥 四店同庆417宠粉 · 锦城烟火直播拾味
+
+十年锦城味，五年米其林
+喝茶吃饭涮火锅，双锦尽享
+
+4月17日，观锦三平台品牌直播重磅上线
+💥 历史破价，品牌从未有过的折扣：
+• 观锦中餐代金券 6.5折起
+• 锦燚火锅代金券 6折起
+
+📱 进入直播间：
+美团/大众点评 输入口令【3333】
+抖音搜索【观锦】或扫码进入
+
+名额有限，先到先得！
+4月17日锁定直播间，不见不散👋</div>
+            </div>
+            
+            <div class="template-box">
+                <h5>模板二：直播当天朋友圈（4月17日发布）</h5>
+                <div class="template-content">🔥🔥 【正在直播】观锦品牌直播火热进行中！
+
+四店同庆417宠粉 · 锦城烟火直播拾味
+十年锦城味，五年米其林
+
+💥 历史破价限时抢：
+• 观锦中餐代金券 6.5折起
+• 锦燚火锅代金券 6折起
+
+🍲 三大核心：
+观锦餐厅 | 锦燚火锅 | 直播代金券折扣
+
+喝茶吃饭涮火锅，双锦尽享
+这次品牌直播价格真的太给力了！
+
+📱 进入直播间：
+美团/大众点评 输入口令【3333】
+抖音搜索【观锦】
+
+赶紧进来抢购！👇</div>
+            </div>
+            
+            <div class="template-box">
+                <h5>老顾客私信模板</h5>
+                <div class="template-content">xx哥/姐，好久没见啦！最近好不好？😊
+
+跟您说个好消息！
+4月17日观锦做品牌直播，历史破价！
+
+💥 品牌从未有过的折扣：
+• 观锦中餐代金券 6.5折起
+• 锦燚火锅代金券 6折起
+
+📱 进入方式：
+美团/大众点评 输入口令【3333】
+或者抖音搜索【观锦】
+
+十年锦城味，五年米其林
+喝茶吃饭涮火锅，双锦尽享
+
+记得那天来直播间蹲一蹲，
+帮您抢一张先存着！</div>
+                <div class="template-note">注意：根据实际关系调整语气</div>
+            </div>
+            
+            <div class="template-box">
+                <h5>社群/新顾客私信模板</h5>
+                <div class="template-content">您好！我是观锦的小xx 👋
+
+给您分享一个超值福利：
+观锦4月17日三平台品牌直播
+
+💥 历史破价，品牌首惠：
+• 观锦中餐代金券 6.5折起
+• 锦燚火锅代金券 6折起
+
+🍲 三大核心：
+观锦餐厅 | 锦燚火锅 | 直播代金券折扣
+
+十年锦城味，五年米其林
+喝茶吃饭涮火锅，双锦尽享
+
+📱 怎么进直播间：
+美团/大众点评 → 输入口令【3333】
+抖音 → 搜索【观锦】
+
+名额有限，可以关注一下哦！</div>
+                <div class="template-note">注意：先建立信任再推活动</div>
+            </div>
+        </div>
+
+        <!-- Section 8: 直播日执行重点 - 优化为口号 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="num">08</span>
+                直播日执行重点
+            </div>
+            
+            <div class="highlight-box" style="text-align: center; margin-bottom: 30px;">
+                <p style="font-size: 1.6em; font-family: 'Source Han Serif CN', serif; letter-spacing: 3px; color: #c41e3a; font-weight: 700;">
+                    全员冲刺 · 万券齐发 · 一战封神
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1em;">
+                    以售卖和品牌宣传为核心，全员参与，全渠道发力
+                </p>
+            </div>
+            
+            <div class="checklist">
+                <div class="checklist-group">
+                    <h4>全员直播间互动</h4>
+                    <ul>
+                        <li>所有员工进入直播间点赞、评论、分享</li>
+                        <li>营造火热氛围带动转化</li>
+                        <li>实时转发直播链接至私域</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>门店接待准备</h4>
+                    <ul>
+                        <li>提前准备好核销流程</li>
+                        <li>安排充足服务人手</li>
+                        <li>确保用餐体验，提升好评率</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>私域流量转化</h4>
+                    <ul>
+                        <li>朋友圈持续宣发直播盛况</li>
+                        <li>私信触达潜在顾客</li>
+                        <li>社群实时分享抢购信息</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h4>数据实时跟踪</h4>
+                    <ul>
+                        <li>监控各门店核销进度</li>
+                        <li>及时调整推广策略</li>
+                        <li>记录高光时刻用于复盘</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - 突出公司品牌 -->
+        <div class="footer">
+            <h2>全力以赴 · 4.17必胜</h2>
+            <p class="slogan">万券齐发 · 一战封神</p>
+            <p class="slogan-sub">让每个员工都成为品牌的传播者</p>
+            
+            <div class="action-items">
+                <div class="action-item">确认门店目标</div>
+                <div class="action-item">全员宣发启动</div>
+                <div class="action-item">4.17直播见</div>
+            </div>
+            
+            <div class="company-branding">
+                <div class="company-name">成都弯道超车传媒有限公司</div>
+                <div class="company-tagline">营销咨询战略合作 · 品牌增长加速器</div>
+            </div>
+            
+            <div class="warning-badge">
+                观锦品牌官方培训资料
+            </div>
+        </div>
+    </div>
+</body>
+</html>
